@@ -1,9 +1,29 @@
-import React from 'react'
+"use client";
+import React, { useEffect, useState } from "react";
 
 const page = () => {
-  return (
-    <div>page</div>
-  )
-}
+  const [message, setMessage] = useState("Loading");
+  const [people, setPeople] = useState([]);
 
-export default page
+  useEffect(() => {
+    fetch("http://localhost:8080/api/home")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setMessage(data.message);
+        setPeople(data.people);
+      });
+  }, []);
+
+  return (
+    <div>
+      <div>{message}</div>
+
+      {people.map((person, index) => (
+        <div key={index}>{person}</div>
+      ))}
+    </div>
+  );
+};
+
+export default page;
