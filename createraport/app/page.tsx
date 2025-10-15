@@ -1,40 +1,54 @@
 import React from "react";
 
-const page = () => {
-  const repeatCount = 10;
+const Page = () => {
   return (
-    <div className="relative grid h-screen w-full place-items-center p-4 overflow-hidden">
-      <h1 className="z-10 cursor-pointer text-center">
-        {Array.from({ length: repeatCount }).map((_, index) => (
-          <div key={index}>
-            <span className="animated-text-fill font-oswald text-5xl font-bold uppercase tracking-widest md:text-6xl lg:text-8xl">
-              createRaport
+    <div className="flex flex-col lg:flex-row justify-center items-center h-screen w-full gap-10 lg:gap-10 p-4 text-center lg:text-left">
+      <div className="text-3xl md:text-4xl lg:text-8xl font-bold max-w-[800px]">
+        <div>
+          <span className="animated-text-fill font-mono text-5xl font-bold tracking-widest md:text-6xl lg:text-4xl">
+            createRaport
+          </span>
+        </div>
+        The ultimate bug reporting tool
+        <div className="flex justify-center lg:justify-start gap-5 md:gap-10 mt-8">
+          {/* Lepsze stylowanie przycisków */}
+          <button className="button">
+            <div className="button-overlay"></div>
+            <span>
+              START NOW
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 53 58"
+              >
+                <path
+                  strokeWidth="9"
+                  stroke="currentColor"
+                  d="M44.25 36.3612L17.25 51.9497C11.5833 55.2213 4.5 51.1318 4.50001 44.5885L4.50001 13.4115C4.50001 6.86824 11.5833 2.77868 17.25 6.05033L44.25 21.6388C49.9167 24.9104 49.9167 33.0896 44.25 36.3612Z"
+                ></path>
+              </svg>
             </span>
-          </div>
-        ))}
-      </h1>
-      {/* 4. Pierwszy "robaczek" - Górny Prawy Róg */}
-      <img
-        src="/ASCII ART - WHITE BUG.png"
-        alt="Robaczek w górnym prawym rogu"
-        className="absolute top-4 right-4 object-contain z-20 transition-transform duration-300
-                   w-32 h-32 // Domyślny rozmiar na mobile
-                   md:w-48 md:h-48 // Rozmiar na tabletach
-                   lg:w-[min(700px,90vw)] lg:h-[min(700px,90vh)]
-                   rotate-180"
-      />
+          </button>
+          <button className="button">
+            <div className="button-overlay"></div>
+            <span>CONTACT US</span>
+          </button>
+        </div>
+      </div>
 
-      {/* 5. Drugi "robaczek" - Dolny Lewy Róg */}
-      <img
-        src="/ASCII ART - WHITE BUG.png"
-        alt="Robaczek w dolnym lewym rogu"
-        className="absolute bottom-4 left-4 object-contain z-20 transition-transform duration-300
-                   w-32 h-32 // Domyślny rozmiar na mobile
-                   md:w-48 md:h-48 // Rozmiar na tabletach
-                   lg:w-[min(700px,90vw)] lg:h-[min(700px,90vh)]"
-      />
+      <div>
+        <img
+          src="/lupa.png"
+          alt="Abstract 3D shape"
+          className="
+            opacity-60
+            w-48 h-48 
+            md:w-64 md:h-64 
+            lg:w-[min(800px,80vw)] lg:h-[min(800px,80vh)]"
+        />
+      </div>
     </div>
   );
 };
 
-export default page;
+export default Page;
