@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-oswald: var(--font-oswald);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,3 +25,35 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+.animated-text-fill {
+  /* Adres URL tła z przykładu */
+  background: url(/animated-text-fill.png) repeat-y;
+  
+  /* Przycinamy tło do kształtu tekstu */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Kolor tekstu staje się przezroczysty, aby odsłonić tło */
+  -webkit-text-fill-color: transparent;
+  
+  /* Stosujemy animację zdefiniowaną poniżej */
+  animation: aitf 60s linear infinite;
+  
+  /* Poprawia płynność animacji */
+  transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+}
+
+/* Definicja animacji - przesuwa pozycję tła w poziomie.
+  `aitf` to skrót od "animated text fill".
+*/
+@keyframes aitf {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+
+

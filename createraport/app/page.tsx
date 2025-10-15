@@ -1,13 +1,18 @@
 import React from "react";
 
 const page = () => {
+  const repeatCount = 10;
   return (
     <div className="relative grid h-screen w-full place-items-center p-4 overflow-hidden">
-      {/* Tekst - na wierzchu, wyśrodkowany */}
-      <h1 className="font-mono cursor-pointer text-5xl md:text-6xl lg:text-8xl col-start-1 row-start-1 z-10 shadow-2xl shadow-amber-50">
-        createRaport
+      <h1 className="z-10 cursor-pointer text-center">
+        {Array.from({ length: repeatCount }).map((_, index) => (
+          <div key={index}>
+            <span className="animated-text-fill font-oswald text-5xl font-bold uppercase tracking-widest md:text-6xl lg:text-8xl">
+              createRaport
+            </span>
+          </div>
+        ))}
       </h1>
-
       {/* 4. Pierwszy "robaczek" - Górny Prawy Róg */}
       <img
         src="/ASCII ART - WHITE BUG.png"
