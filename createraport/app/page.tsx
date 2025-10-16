@@ -1,8 +1,9 @@
 import React from "react";
+import { Button } from "@/components/ui/button"
 
 const Page = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center h-screen w-full gap-10 lg:gap-10 p-4 text-center lg:text-left">
+    <div className="landing-background flex flex-col lg:flex-row justify-center items-center h-screen w-full gap-10 lg:gap-10 p-4 text-center lg:text-left">
       <div className="font-bold max-w-[800px]">
         <div>
           <span className="animated-text-fill font-mono text-5xl font-bold tracking-widest md:text-6xl lg:text-4xl">
@@ -12,11 +13,11 @@ const Page = () => {
         <h1 className="text-3xl md:text-4xl lg:text-8xl">
           The ultimate bug reporting tool
         </h1>
-        <div className="flex justify-left gap-10 mt-10">
+        <div className="flex justify-left gap-5 mt-10">
           <a href="./dashboard/">
-            <button className="basic-button-dark">Start reporting</button>
+            <Button variant="outline" className="h-12">Enter</Button>
           </a>
-          <button className="basic-button-white">Contact us</button>
+          <Button variant="outline" className="h-12">Contact us</Button>
         </div>
       </div>
 

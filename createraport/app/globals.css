@@ -155,10 +155,21 @@
 }
 
 @layer base {
+
+    button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.landing-background{
+background: #1f1e1e;
+background: radial-gradient(circle, rgba(31, 30, 30, 1) 0%, rgba(11, 11, 10, 1) 64%);
+
 }
