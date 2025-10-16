@@ -9,9 +9,13 @@ const Page = () => {
             createRaport
           </span>
         </div>
-        <h1 className="text-3xl md:text-4xl lg:text-8xl">The ultimate bug reporting tool</h1>
-        <div className="flex justify-left gap-10 mt-5">
-          <button className="basic-button-dark">Start reporting</button>
+        <h1 className="text-3xl md:text-4xl lg:text-8xl">
+          The ultimate bug reporting tool
+        </h1>
+        <div className="flex justify-left gap-10 mt-10">
+          <a href="./dashboard/">
+            <button className="basic-button-dark">Start reporting</button>
+          </a>
           <button className="basic-button-white">Contact us</button>
         </div>
       </div>
