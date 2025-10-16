@@ -77,7 +77,10 @@ export default function Page() {
                   <Label htmlFor="bug-id" className="mb-2">Bug id</Label>
                   <Input id="bug-id" type="text" placeholder="Issue id" />
                 </div>
-
+                <div>
+                  <Label htmlFor="bug-id" className="mb-2">Title</Label>
+                  <Input id="bug-id" type="text" placeholder="Title" />
+                </div>
                 <div>
                   <Label>Priority</Label>
                   {/* <DropdownMenuRadioGroupDemo /> */}
