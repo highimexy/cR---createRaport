@@ -32,14 +32,9 @@ const data = {
   navMain: [
     {
       title: "Create Raport",
-      url: "#",
+      url: "./create",
       icon: SquareTerminal,
       isActive: true,
-    },
-    {
-      title: "Create Raport 2",
-      url: "#",
-      icon: Bot,
     },
   ],
   projects: [
