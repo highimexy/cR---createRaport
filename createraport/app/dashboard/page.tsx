@@ -13,6 +13,12 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { Metadata } from "next"
+//metadata
+export const metadata: Metadata = {
+  title: "createRaport - Workspace",
+  description: "createRaport - Workspace",
+};
 
 export default function Page() {
   return (
