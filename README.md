@@ -33,6 +33,7 @@ The primary goal of this project is to minimize misunderstandings and accelerate
 - **Frontend**:
   - [React.js](https://reactjs.org/)
   - [Tailwind CSS](https://tailwindcss.com/)
+  - [Shadcn](https://ui.shadcn.com/)
 - **Backend**:
   - [Node.js](https://nodejs.org/)
   - [Express.js](https://expressjs.com/)
