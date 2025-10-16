@@ -1,7 +1,7 @@
 "use client"
 
 import type { LucideIcon } from "lucide-react"
-import Link from "next/link" // Używamy Link dla lepszej nawigacji w Next.js
+import Link from "next/link" 
 
 import {
   SidebarGroup,

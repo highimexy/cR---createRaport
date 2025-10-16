@@ -1,4 +1,4 @@
-import { AppSidebar } from "@/components/app-sidebar"
+import { AppSidebar } from "@/components/app-sidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,14 +6,14 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Separator } from "@/components/ui/separator"
+} from "@/components/ui/breadcrumb";
+import { Separator } from "@/components/ui/separator";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/components/ui/sidebar"
-import { Metadata } from "next"
+} from "@/components/ui/sidebar";
+import { Metadata } from "next";
 //metadata
 export const metadata: Metadata = {
   title: "createRaport - Workspace",
@@ -36,8 +36,7 @@ export default function Page() {
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="#">
-                  </BreadcrumbLink>
+                  <BreadcrumbLink href="#"></BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="hidden md:block" />
                 <BreadcrumbItem>
@@ -54,7 +53,7 @@ export default function Page() {
                 src="/lupa.png"
                 alt="Abstract 3D shape"
                 className="
-            opacity-20
+            opacity-2
             w-48 h-48 
             md:w-64 md:h-64 
             lg:w-[min(600px,80vw)] lg:h-[min(600px,80vh)]"
@@ -64,5 +63,5 @@ export default function Page() {
         </div>
       </SidebarInset>
     </SidebarProvider>
-  )
+  );
 }
