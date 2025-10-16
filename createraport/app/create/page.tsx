@@ -1,3 +1,4 @@
+
 import { AppSidebar } from "@/components/app-sidebar"
 import {
   Breadcrumb,
@@ -14,6 +15,22 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 import { Metadata } from "next"
+
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupButton,
+  InputGroupInput,
+  InputGroupText,
+  InputGroupTextarea,
+} from "@/components/ui/input-group"
+
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+
+import * as React from "react"
+import { Button } from "@/components/ui/button"
+import { DropdownMenuRadioGroup } from "@/components/ui/dropdown-menu"
 
 
 //metadata
@@ -50,11 +67,78 @@ export default function Page() {
             </Breadcrumb>
           </div>
         </header>
-        <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
+        <div className="flex flex-1 flex-col gap-4 p-4 pt-0 max">
           <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min">
-            <div className="flex justify-evenly m-4">
-              <div>FORM part 1</div>
-              <div>Expected i actual</div>
+            <div className="flex w-full max-w-7xl mx-auto flex-col items-start justify-center gap-12 px-4 py-10 lg:flex-row lg:gap-16 lg:px-8">
+
+              {/* === LEWA KOLUMNA === */}
+              <div className="flex w-full flex-col gap-6 lg:w-1/2">
+                <div>
+                  <Label htmlFor="bug-id" className="mb-2">Bug id</Label>
+                  <Input id="bug-id" type="text" placeholder="Issue id" />
+                </div>
+
+                <div>
+                  <Label>Priority</Label>
+                  {/* <DropdownMenuRadioGroupDemo /> */}
+                </div>
+
+                <div>
+                  <Label htmlFor="picture" className="mb-2">Screenshoot / Video</Label>
+                  <Input id="picture" type="file" />
+                </div>
+
+                <div>
+                  <Label htmlFor="steps" className="mb-2">Steps to reproduce</Label>
+                  <InputGroup>
+                    <InputGroupTextarea
+                      id="steps"
+                      className="h-[300px]"
+                      placeholder="Enter steps to reproduce"
+                    />
+                    <InputGroupAddon align="block-end">
+                      <InputGroupText className="text-muted-foreground text-xs">
+                        120 characters left
+                      </InputGroupText>
+                    </InputGroupAddon>
+                  </InputGroup>
+                </div>
+              </div>
+
+              {/* === PRAWA KOLUMNA === */}
+              <div className="flex w-full flex-col gap-6 lg:w-1/2">
+                <div>
+                  <Label htmlFor="actual" className="mb-2">Actual</Label>
+                  <InputGroup>
+                    <InputGroupTextarea
+                      id="actual"
+                      className="h-[300px]"
+                      placeholder="Enter actual result"
+                    />
+                    <InputGroupAddon align="block-end">
+                      <InputGroupText className="text-muted-foreground text-xs">
+                        120 characters left
+                      </InputGroupText>
+                    </InputGroupAddon>
+                  </InputGroup>
+                </div>
+
+                <div>
+                  <Label htmlFor="expected" className="mb-2">Expected</Label>
+                  <InputGroup>
+                    <InputGroupTextarea
+                      id="expected"
+                      className="h-[300px]"
+                      placeholder="Enter expected result"
+                    />
+                    <InputGroupAddon align="block-end">
+                      <InputGroupText className="text-muted-foreground text-xs">
+                        120 characters left
+                      </InputGroupText>
+                    </InputGroupAddon>
+                  </InputGroup>
+                </div>
+              </div>
             </div>
           </div>
         </div>
