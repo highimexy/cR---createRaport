@@ -25,8 +25,8 @@ const Page = () => {
         <img
           src="/lupa.png"
           alt="Abstract 3D shape"
-          className="|
-            opacity-80
+          className="
+            opacity-70
             w-48 h-48 
             md:w-64 md:h-64 
             lg:w-[min(600px,80vw)] lg:h-[min(600px,80vh)]"

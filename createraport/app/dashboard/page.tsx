@@ -32,7 +32,7 @@ export default function Page() {
               orientation="vertical"
               className="mr-2 data-[orientation=vertical]:h-4"
             />
-            
+
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
@@ -48,7 +48,19 @@ export default function Page() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
+          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min">
+            <div className="flex h-full justify-center items-center">
+              <img
+                src="/lupa.png"
+                alt="Abstract 3D shape"
+                className="
+            opacity-20
+            w-48 h-48 
+            md:w-64 md:h-64 
+            lg:w-[min(600px,80vw)] lg:h-[min(600px,80vh)]"
+              />
+            </div>
+          </div>
         </div>
       </SidebarInset>
     </SidebarProvider>
