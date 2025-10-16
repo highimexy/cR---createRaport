@@ -14,6 +14,8 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 import { Metadata } from "next"
+
+
 //metadata
 export const metadata: Metadata = {
   title: "createRaport - Workspace",
@@ -32,7 +34,7 @@ export default function Page() {
               orientation="vertical"
               className="mr-2 data-[orientation=vertical]:h-4"
             />
-            
+
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
@@ -49,7 +51,12 @@ export default function Page() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
+          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min">
+            <div className="flex justify-evenly m-4">
+              <div>FORM part 1</div>
+              <div>Expected i actual</div>
+            </div>
+          </div>
         </div>
       </SidebarInset>
     </SidebarProvider>
